@@ -1,0 +1,16 @@
+version: '3.8'
+services:
+  opchain:
+    build:
+      context: .
+      dockerfile: docker/Dockerfile
+    ports:
+      - "8080:8080"
+    volumes:
+      - ./opchain-data:/app/runtime
+    environment:
+      - SECRET_KEY=change_this_to_a_random_256_bit_string_before_production
+      - FIRST_RUN_ADMIN_PASSWORD=admin123
+      - DATABASE_URL=sqlite:////app/runtime/opchain.db
+      - EVIDENCE_STORAGE_PATH=/app/runtime/evidence
+    restart: unless-stopped

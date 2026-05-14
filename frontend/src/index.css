@@ -1,0 +1,32 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  body {
+    @apply bg-gray-950 text-gray-100 font-mono;
+  }
+}
+
+@layer components {
+  .btn-primary {
+    @apply bg-sky-600 hover:bg-sky-500 text-white px-4 py-2 rounded text-sm font-medium transition-colors;
+  }
+  .btn-secondary {
+    @apply bg-gray-700 hover:bg-gray-600 text-gray-100 px-4 py-2 rounded text-sm font-medium transition-colors;
+  }
+  .btn-danger {
+    @apply bg-red-700 hover:bg-red-600 text-white px-4 py-2 rounded text-sm font-medium transition-colors;
+  }
+  .input {
+    @apply bg-gray-800 border border-gray-700 text-gray-100 rounded px-3 py-2 text-sm w-full focus:outline-none focus:border-sky-500 placeholder-gray-500;
+  }
+  .card {
+    @apply bg-gray-900 border border-gray-800 rounded-lg p-4;
+  }
+  .badge-critical { @apply bg-red-900 text-red-300 text-xs px-2 py-0.5 rounded font-medium; }
+  .badge-high { @apply bg-orange-900 text-orange-300 text-xs px-2 py-0.5 rounded font-medium; }
+  .badge-medium { @apply bg-yellow-900 text-yellow-300 text-xs px-2 py-0.5 rounded font-medium; }
+  .badge-low { @apply bg-blue-900 text-blue-300 text-xs px-2 py-0.5 rounded font-medium; }
+  .badge-informational { @apply bg-gray-700 text-gray-300 text-xs px-2 py-0.5 rounded font-medium; }
+}
